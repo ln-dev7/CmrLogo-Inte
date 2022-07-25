@@ -17,7 +17,7 @@
 $yellow: #fed116;
 $green: #009e61;
 $gray: #f3f4f6;
-$black: #1A202E;
+$black: #1a202e;
 
 *,
 ::before,
@@ -79,21 +79,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &__logo{
-
+    &__logo {
     }
-    &__options{
+    &__options {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 1rem;
       margin: 0 3rem;
-      li{
+      li {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: .5rem;
-        span{
+        gap: 0.5rem;
+        span {
           display: inline-block;
           font-weight: bold;
         }
@@ -112,13 +111,13 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: .5rem;
+      gap: 0.5rem;
       border-radius: 4px;
       padding: 0.5rem 1rem;
       background: #fff;
       cursor: pointer;
-      transition: .3s ease;
-      span{
+      transition: 0.3s ease;
+      span {
         font-weight: bold;
         display: inline-block;
         line-height: 18px;
@@ -127,23 +126,23 @@ body {
         }
       }
     }
-    .upload{
+    .upload {
       border: 2px solid $green;
-      span{
+      span {
         color: $green;
       }
-      &:hover{
-        background: #F1F5F9;
+      &:hover {
+        background: #f1f5f9;
       }
     }
-    .github{
+    .github {
       border: none;
-      span{
+      span {
         color: $black;
       }
-      &:hover{
-        span{
-          color: rgba($color: $black, $alpha: .75);
+      &:hover {
+        span {
+          color: rgba($color: $black, $alpha: 0.75);
         }
       }
     }
@@ -160,11 +159,50 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-direction: column;
     border-left: 2px dashed $yellow;
     border-right: 2px dashed $green;
+    z-index: 3;
   }
-  .bg-lines{
+  &-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 750px;
+    max-width: 95%;
+    margin-top: 7.5rem;
+    h1 {
+      font-size: 1.5rem;
+      line-height: 32px;
+    }
+    h3{
+      font-size: 1rem;
+      line-height: 24px;
+      margin-bottom: 1rem;
+    }
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      background: $yellow;
+      border: 2px solid #fff;
+      cursor: pointer;
+      transition: 0.3s ease;
+      span {
+        font-weight: bold;
+        display: inline-block;
+        line-height: 18px;
+      }
+      &:hover {
+        box-shadow: 0 0 0 2px $yellow;
+      }
+    }
+  }
+  .bg-lines {
     position: absolute;
     top: 0;
     left: 0;
@@ -173,14 +211,15 @@ body {
     height: 100%;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 1fr;
-    .bg-line{
+    z-index: -1;
+    .bg-line {
       border-right: 2px $gray;
       width: 100%;
       height: 100%;
-      &:nth-child(even){
+      &:nth-child(even) {
         border-right-style: dashed;
       }
-      &:nth-child(odd){
+      &:nth-child(odd) {
         border-right-style: solid;
       }
     }
