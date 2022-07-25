@@ -1,32 +1,29 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200;300;400;500;600;700;800&display=swap');
-// font-family: 'Epilogue', sans-serif;
-
-@font-face{
-  font-family: 'Helvetica';
-  src: url('../fonts/Helvetica.woff2') format('woff2');
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/Helvetica.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face{
-  font-family: 'Helvetica';
-  src: url('../fonts/Helvetica-Bold.woff2') format('woff2');
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/Helvetica-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
 }
 
 // Colors
-$yellow: #FED116;
-$green: #009E61;
-$gray: #F3F4F6;
-$black: #000;
+$yellow: #fed116;
+$green: #009e61;
+$gray: #f3f4f6;
+$black: #1A202E;
 
 *,
 ::before,
 ::after {
   box-sizing: border-box;
-  font-family: 'Helvetica', sans-serif;
+  font-family: "Helvetica", sans-serif;
   color: $black;
   font-weight: normal;
   margin: 0;
@@ -44,17 +41,126 @@ li {
   list-style: none;
 }
 
-p{
-  font-family: 'Epilogue', sans-serif;
+p {
+  font-family: "Epilogue", sans-serif;
 }
 
-img{
+img {
   max-width: 100%;
   height: auto;
   cursor: pointer;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
+}
+
+.xl {
+  width: 1280px;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 2px solid $gray;
+  .xl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo{
+
+    }
+    &__options{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin: 0 3rem;
+      li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        span{
+          display: inline-block;
+          font-weight: bold;
+        }
+        @media screen and (max-width: 860px) {
+          display: none;
+        }
+      }
+    }
+  }
+  &-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .5rem;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      background: #fff;
+      cursor: pointer;
+      transition: .3s ease;
+      span{
+        font-weight: bold;
+        display: inline-block;
+        line-height: 18px;
+        @media screen and (max-width: 640px) {
+          display: none;
+        }
+      }
+    }
+    .upload{
+      border: 2px solid $green;
+      span{
+        color: $green;
+      }
+      &:hover{
+        background: #F1F5F9;
+      }
+    }
+    .github{
+      border: none;
+      span{
+        color: $black;
+      }
+      &:hover{
+        span{
+          color: rgba($color: $black, $alpha: .75);
+        }
+      }
+    }
+  }
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .xl {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 2px dashed $yellow;
+    border-right: 2px dashed $green;
+  }
 }

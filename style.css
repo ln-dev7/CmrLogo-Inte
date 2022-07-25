@@ -1,13 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@200;300;400;500;600;700;800&display=swap");
 @font-face {
-  font-family: 'Helvetica';
+  font-family: "Helvetica";
   src: url("../fonts/Helvetica.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Helvetica';
+  font-family: "Helvetica";
   src: url("../fonts/Helvetica-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
@@ -18,8 +17,8 @@
 ::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Helvetica', sans-serif;
-  color: #000;
+  font-family: "Helvetica", sans-serif;
+  color: #1A202E;
   font-weight: normal;
   margin: 0;
   padding: 0;
@@ -37,7 +36,7 @@ li {
 }
 
 p {
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
 }
 
 img {
@@ -46,8 +45,188 @@ img {
   cursor: pointer;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
+}
+
+.xl {
+  width: 1280px;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.header .xl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-left__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  margin: 0 3rem;
+}
+
+.header-left__options li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: .5rem;
+}
+
+.header-left__options li span {
+  display: inline-block;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 860px) {
+  .header-left__options li {
+    display: none;
+  }
+}
+
+.header-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+.header-right button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5rem;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  cursor: pointer;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.header-right button span {
+  font-weight: bold;
+  display: inline-block;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 640px) {
+  .header-right button span {
+    display: none;
+  }
+}
+
+.header-right .upload {
+  border: 2px solid #009e61;
+}
+
+.header-right .upload span {
+  color: #009e61;
+}
+
+.header-right .upload:hover {
+  background: #F1F5F9;
+}
+
+.header-right .github {
+  border: none;
+}
+
+.header-right .github span {
+  color: #1A202E;
+}
+
+.header-right .github:hover span {
+  color: rgba(26, 32, 46, 0.75);
+}
+
+.main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .xl {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-left: 2px dashed #fed116;
+  border-right: 2px dashed #009e61;
 }
 /*# sourceMappingURL=style.css.map */
