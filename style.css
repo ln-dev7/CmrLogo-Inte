@@ -214,10 +214,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  background: rgba(0, 158, 97, 0.03);
 }
 
 .main .xl {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,6 +234,7 @@ body {
   border-left: 2px dashed #fed116;
   border-right: 2px dashed #009e61;
   z-index: 3;
+  background: #fff;
 }
 
 .main-header {
@@ -250,9 +251,11 @@ body {
   width: 750px;
   max-width: 95%;
   margin-top: 7.5rem;
+  margin-bottom: 4rem;
 }
 
 .main-header h1 {
+  font-weight: 500;
   font-size: 1.5rem;
   line-height: 32px;
 }
@@ -275,7 +278,7 @@ body {
           align-items: center;
   gap: 0.5rem;
   border-radius: 4px;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   background: #fed116;
   border: 2px solid #fff;
   cursor: pointer;
@@ -292,6 +295,52 @@ body {
 .main-header button:hover {
   -webkit-box-shadow: 0 0 0 2px #fed116;
           box-shadow: 0 0 0 2px #fed116;
+}
+
+.main-container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+@media screen and (max-width: 860px) {
+  .main-container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .main-container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.main-container .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .logo:nth-child(odd) {
+  background: #f3f4f6;
+  border: 1px solid #f3f4f6;
+}
+
+.main-container .logo:nth-child(even) {
+  background: #fff;
+  border: 1px solid #f3f4f6;
 }
 
 .main .bg-lines {
@@ -321,5 +370,18 @@ body {
 
 .main .bg-lines .bg-line:nth-child(odd) {
   border-right-style: solid;
+}
+
+@media screen and (max-width: 728px) {
+  .main .bg-lines .bg-line:nth-child(odd) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 728px) {
+  .main .bg-lines {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
 }
 /*# sourceMappingURL=style.css.map */
