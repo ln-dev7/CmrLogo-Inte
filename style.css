@@ -408,6 +408,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
+}
+
+.overlay.overlay-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .overlay .card-upload {
@@ -415,6 +422,144 @@ body {
 }
 
 .overlay .card-download {
+  width: 900px;
+  max-width: 90%;
   z-index: 10;
+  background: #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 2rem 1.5rem;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .overlay .card-download {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .overlay .card-download .card-download__infos {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .overlay .card-download .card-download__infos p {
+    text-align: center;
+  }
+}
+
+.overlay .card-download__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.overlay .card-download__logo {
+  width: 280px;
+  height: 280px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f3f4f6;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.overlay .card-download__infos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: .75rem;
+}
+
+.overlay .card-download__infos p {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.overlay .card-download__infos div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5rem;
+}
+
+.overlay .card-download__infos-button {
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 460px) {
+  .overlay .card-download__infos-button {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .overlay .card-download__infos-button button {
+    width: 100%;
+  }
+}
+
+.overlay .card-download__infos-button button {
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.overlay .card-download__infos-button button:hover {
+  -webkit-box-shadow: 0 0 0 2px rgba(0, 158, 97, 0.3);
+          box-shadow: 0 0 0 2px rgba(0, 158, 97, 0.3);
+}
+
+.overlay .card-download__infos-button button:first-child {
+  border: 2px solid #009e61;
+  background: #009e61;
+  color: #fff;
+}
+
+.overlay .card-download__infos-button button:last-child {
+  border: 2px solid #1a202e;
+  background: #fff;
+  color: #1a202e;
 }
 /*# sourceMappingURL=style.css.map */

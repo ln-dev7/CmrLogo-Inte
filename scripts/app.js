@@ -2,12 +2,11 @@ const overlay = document.querySelector(".overlay");
 const cardUpload = document.querySelector(".card-upload");
 const cardDownload = document.querySelector(".card-download");
 // ----------------------------------------------------------------------------
-const btnUpload = document.querySelector(".header-right upload");
+const btnUpload = document.querySelector(".header-right .upload");
 btnUpload.addEventListener("click", () => {
   overlay.classList.add("overlay-active");
   cardDownload.classList.add("hide");
 
-  
 });
 // ----------------------------------------------------------------------------
 const logos = document.querySelectorAll(".logo");
@@ -15,9 +14,13 @@ logos.forEach((logo) => {
   logo.addEventListener("click", () => {
     overlay.classList.add("overlay-active");
     cardUpload.classList.add("hide");
-
-
   });
+
+  document
+    .querySelector(".card-download__close")
+    .addEventListener("click", () => {
+      overlay.classList.remove("overlay-active");
+    });
 });
 // ----------------------------------------------------------------------------
 // const menuClose = document.querySelector(".menu-close");
