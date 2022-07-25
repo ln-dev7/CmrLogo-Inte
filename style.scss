@@ -3,27 +3,32 @@
 // font-family: 'Epilogue', sans-serif;
 
 @font-face{
-  font-family: 'BigNoodleTitling';
-  src: url('../fonts/big_noodle_titling.woff2') format('woff2');
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face{
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
 // Colors
-$yellow: #FED018;
-$green: #037961;
-$greenDark: #14532D;
-$red: #CE1127;
-$gray: #A1A1AA;
-$black: #27272A;
+$yellow: #FED116;
+$green: #009E61;
+$gray: #F3F4F6;
+$black: #000;
 
 *,
 ::before,
 ::after {
   box-sizing: border-box;
-  font-family: 'BigNoodleTitling', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   color: $black;
-  font-weight: 300;
+  font-weight: normal;
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -52,45 +57,4 @@ img{
 html, body {
   height: 100%;
   width: 100%;
-}
-
-#loader{
-  z-index: 10;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  transition: 0.5s ease-in-out;
-  h2{
-    color: $green;
-    font-size: 1.5rem;
-    letter-spacing: 3px;
-    font-family: 'Epilogue', sans-serif;
-  }
-  &.loaded{
-    opacity: 0;
-    transform: translate(0, -100%);
-    z-index: -10;
-  }
-}
-
-.author{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
-  border-top: 1px solid $gray;
-  p{
-    text-align: center;
-    a:hover{
-      color: $green;
-    }
-  }
 }
