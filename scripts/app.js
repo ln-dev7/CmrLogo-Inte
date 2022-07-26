@@ -5,14 +5,20 @@ const cardDownload = document.querySelector(".card-download");
 const btnUpload = document.querySelector(".header-right .upload");
 btnUpload.addEventListener("click", () => {
   overlay.classList.add("overlay-active");
+  cardUpload.classList.remove("hide");
   cardDownload.classList.add("hide");
-
+  document
+  .querySelector(".card-upload")
+  .addEventListener("click", () => {
+    overlay.classList.remove("overlay-active");
+  });
 });
 // ----------------------------------------------------------------------------
 const logos = document.querySelectorAll(".logo");
 logos.forEach((logo) => {
   logo.addEventListener("click", () => {
     overlay.classList.add("overlay-active");
+    cardDownload.classList.remove("hide");
     cardUpload.classList.add("hide");
   });
 
