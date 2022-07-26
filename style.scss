@@ -290,7 +290,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
+  display: none;
 
   &.overlay-active {
     display: flex;
@@ -312,6 +312,8 @@ body {
     padding: 3rem 2rem;
     border-radius: 4px;
 
+    max-height: 90vh;
+
     &.hide {
       display: none;
     }
@@ -325,6 +327,15 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      overflow-y: scroll;
+      padding-right: 5px;
+      &::-webkit-scrollbar {
+        width: 3px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $green;
+        border-radius: 4px;
+      }
       .form-text {
         width: 50%;
         display: grid;
@@ -399,6 +410,43 @@ body {
           }
         }
       }
+      @media screen and (max-width: 960px) {
+        .form-text{
+          width: 100%;
+          grid-template-areas: "title" "description" "facebook" "twitter" "github" "linkedin" "category";
+        }
+        .form-media{
+          width: auto;
+          margin: 0 3rem;
+        }
+      }
+      @media screen and (max-width: 840px) {
+        flex-direction: column;
+        gap: 1rem;
+        .form-text{
+          width: 100%;
+        }
+        .form-media{
+          width: 100%;
+          flex-direction: row;
+          justify-content: center;
+          margin: 0;
+        }
+      }
+      @media screen and (max-width: 540px) {
+        flex-direction: column;
+        gap: 1rem;
+        .form-text{
+          width: 100%;
+        }
+        .form-media{
+          width: 100%;
+          flex-direction: column;
+          div{
+            width: 100%;
+          }
+        }
+      }
     }
 
     &__submit {
@@ -408,6 +456,7 @@ body {
       gap: 1rem;
       button {
         cursor: pointer;
+        border-radius: 4px;
         transition: 0.3s ease;
         &:hover {
           //box-shadow: 0 0 0 2px rgba($color: $green, $alpha: .3);
@@ -443,7 +492,7 @@ body {
     z-index: 10;
     background: #fff;
     position: relative;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;

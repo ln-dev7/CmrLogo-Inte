@@ -408,7 +408,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: flex;
+  display: none;
 }
 
 .overlay.overlay-active {
@@ -440,6 +440,7 @@ body {
   gap: 2rem;
   padding: 3rem 2rem;
   border-radius: 4px;
+  max-height: 90vh;
 }
 
 .overlay .card-upload.hide {
@@ -466,6 +467,17 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  overflow-y: scroll;
+  padding-right: 5px;
+}
+
+.overlay .card-upload__form::-webkit-scrollbar {
+  width: 3px;
+}
+
+.overlay .card-upload__form::-webkit-scrollbar-thumb {
+  background: #009e61;
+  border-radius: 4px;
 }
 
 .overlay .card-upload__form .form-text {
@@ -618,6 +630,64 @@ body {
   border: 2px solid #009e61;
 }
 
+@media screen and (max-width: 960px) {
+  .overlay .card-upload__form .form-text {
+    width: 100%;
+        grid-template-areas: "title" "description" "facebook" "twitter" "github" "linkedin" "category";
+  }
+  .overlay .card-upload__form .form-media {
+    width: auto;
+    margin: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .overlay .card-upload__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1rem;
+  }
+  .overlay .card-upload__form .form-text {
+    width: 100%;
+  }
+  .overlay .card-upload__form .form-media {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .overlay .card-upload__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1rem;
+  }
+  .overlay .card-upload__form .form-text {
+    width: 100%;
+  }
+  .overlay .card-upload__form .form-media {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .overlay .card-upload__form .form-media div {
+    width: 100%;
+  }
+}
+
 .overlay .card-upload__submit {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -633,6 +703,7 @@ body {
 
 .overlay .card-upload__submit button {
   cursor: pointer;
+  border-radius: 4px;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
@@ -666,7 +737,9 @@ body {
   z-index: 10;
   background: #fff;
   position: relative;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
