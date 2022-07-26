@@ -8,7 +8,7 @@ btnUpload.addEventListener("click", () => {
   cardUpload.classList.remove("hide");
   cardDownload.classList.add("hide");
   document
-  .querySelector(".card-upload")
+  .querySelector(".card-upload__close")
   .addEventListener("click", () => {
     overlay.classList.remove("overlay-active");
   });

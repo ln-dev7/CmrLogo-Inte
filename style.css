@@ -437,8 +437,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1rem;
-  padding: 2rem 1.5rem;
+  gap: 2rem;
+  padding: 3rem 2rem;
   border-radius: 4px;
 }
 
@@ -453,6 +453,169 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.overlay .card-upload__form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.overlay .card-upload__form .form-text {
+  width: 50%;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+      grid-template-areas: "title title" "description description" "facebook twitter" "github linkedin" "category category";
+}
+
+.overlay .card-upload__form .form-text input,
+.overlay .card-upload__form .form-text textarea {
+  resize: none;
+  outline: none;
+  border: 2px solid #E5E5E5;
+  font-size: 14px;
+  color: #97A6BA;
+  border-radius: 4px;
+  padding: .75rem 1rem;
+}
+
+.overlay .card-upload__form .form-text input::-webkit-input-placeholder,
+.overlay .card-upload__form .form-text textarea::-webkit-input-placeholder {
+  color: #97A6BA;
+}
+
+.overlay .card-upload__form .form-text input:-ms-input-placeholder,
+.overlay .card-upload__form .form-text textarea:-ms-input-placeholder {
+  color: #97A6BA;
+}
+
+.overlay .card-upload__form .form-text input::-ms-input-placeholder,
+.overlay .card-upload__form .form-text textarea::-ms-input-placeholder {
+  color: #97A6BA;
+}
+
+.overlay .card-upload__form .form-text input::placeholder,
+.overlay .card-upload__form .form-text textarea::placeholder {
+  color: #97A6BA;
+}
+
+.overlay .card-upload__form .form-text input:focus,
+.overlay .card-upload__form .form-text textarea:focus {
+  border-color: #009e61;
+}
+
+.overlay .card-upload__form .form-text input:nth-child(1),
+.overlay .card-upload__form .form-text textarea:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: title;
+}
+
+.overlay .card-upload__form .form-text input:nth-child(2),
+.overlay .card-upload__form .form-text textarea:nth-child(2) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: description;
+}
+
+.overlay .card-upload__form .form-text input:nth-child(3),
+.overlay .card-upload__form .form-text textarea:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: facebook;
+}
+
+.overlay .card-upload__form .form-text input:nth-child(4),
+.overlay .card-upload__form .form-text textarea:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: twitter;
+}
+
+.overlay .card-upload__form .form-text input:nth-child(5),
+.overlay .card-upload__form .form-text textarea:nth-child(5) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: github;
+}
+
+.overlay .card-upload__form .form-text input:nth-child(6),
+.overlay .card-upload__form .form-text textarea:nth-child(6) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: linkedin;
+}
+
+.overlay .card-upload__form .form-text input:nth-child(7),
+.overlay .card-upload__form .form-text textarea:nth-child(7) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: category;
+}
+
+.overlay .card-upload__form .form-media {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.5rem;
+}
+
+.overlay .card-upload__form .form-media div {
+  width: 200px;
+  height: 120px;
+  background: #f1f5f9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.overlay .card-upload__form .form-media div p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.overlay .card-upload__form .form-media div p span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.overlay .card-upload__form .form-media div:hover {
+  border: 2px solid #009e61;
 }
 
 .overlay .card-upload__submit {
@@ -478,16 +641,16 @@ body {
   background: #009e61;
   color: #fff;
   font-weight: bold;
-  padding: .6rem 1rem;
+  padding: 0.6rem 1rem;
   border: 2px solid #009e61;
 }
 
 .overlay .card-upload__submit button:last-child {
   background: #fff;
-  color: #DC2626;
+  color: #dc2626;
   font-weight: bold;
-  padding: .6rem 1rem;
-  border: 2px solid #DC2626;
+  padding: 0.6rem 1rem;
+  border: 2px solid #dc2626;
 }
 
 .overlay .card-upload__close {
